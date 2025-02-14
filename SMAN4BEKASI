@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA 4 BEKASI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #4A4A8A;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .sidebar .contact-info {
+            margin-top: 20px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .main-content h1 {
+            font-size: 28px;
+            color: #4A4A8A;
+        }
+        .main-content p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Daftar isi</h1>
+        <ul>
+            <li><a href="#" onclick="showContent('sejarah')">Sejarah</a></li>
+            <li><a href="#" onclick="showContent('fasilitas')">Fasilitas</a></li>
+            <li><a href="#" onclick="showContent('ekstrakulikuler')">Ekstrakulikuler</a></li>
+            <li><a href="#" onclick="showContent('jurusan')">Jurusan</a></li>
+            <li><a href="#" onclick="showContent('prestasi')">Prestasi</a></li>
+            <br>
+            <li><a href="#" onclick="showContent('contact')">Contact Us</a></li>
+        </ul>
+        <div class="contact-info">
+            <p>Phone: (+62) 896-1527-2411</p>
+            <p>Email: sma4bekasi@gmail.com</p>
+            <p>Address: Perumahan Jl. Cemara Permai, Harapan Jaya.<br>Bekasi Utara,11124.</p>
+        </div>
+    </div>
+    <div class="main-content" id="content">
+        <img src="https://assets.onecompiler.app/436pdsu28/436vrrjj8/Selamat%20Datang_20250121_111744_0000.png" alt="Deskripsi Gambar" width="300">
+        <h1>SELAMAT DATANG!</h1>
+        <p><b>SMA Negeri 4 Kota Bekasi</b> adalah Sekolah Menengah Atas Negeri.</p>
+        <p>SMA Negeri 4 Bekasi dirintis mulai pada tahun pelajaran 1987/1989 yang merupakan kelas jauh dari SMA Negeri 1 Bekasi. Di awal rintisan waktu itu baru terbentuk tiga kelas dengan jumlah siswa ± 136 siswa dengan jumlah guru tetap 5 (lima) orang. Waktu itu pelaksanaan Kegiatan Belajar Mengajar (KBM) masih menggunakan fasilitas ruang belajar SMP Negeri 4 Bekasi.</p>
+        <p>Tahun pelajaran 1988/1999 lokasi belajar dipindah ke SMAN 1 Bekasi ke Bekasi Timur sebagai sekolah induk dan kegiatan belajar mengajar dilaksanakan siang hari. Status kelas jauh disandang oleh SMAN 4 Bekasi hingga lima angkatan.</p>
+        <p>Tahun 1991 terjadi pergantian Kepala Sekolah, pada periode ini tepatnya tahun 1992 bangunan SMAN 4 Bekasi mulai berdiri Tahun 1994 SMA Negeri 4 Bekasi yang diresmikan dan diserahterimakan.</p>
+    </div>
+    <script>
+        function showContent(section) {
+            const content = document.getElementById('content');
+            switch (section) {
+                case 'sejarah':
+                    content.innerHTML = `
+                    <img src="https://assets.onecompiler.app/436pdsu28/436vrrjj8/Selamat%20Datang_20250121_111744_0000.png" alt="Deskripsi Gambar" width="300">
+                    <h1>Sejarah SMA 4 Bekasi</h1>
+                    <p>SMA Negeri 4 Bekasi dirintis mulai pada tahun pelajaran 1987/1989 yang merupakan kelas jauh dari SMA Negeri 1 Bekasi. Di awal rintisan waktu itu baru terbentuk tiga kelas dengan jumlah siswa ± 136 siswa dengan jumlah guru tetap 5 (lima) orang. Waktu itu pelaksanaan Kegiatan Belajar Mengajar (KBM) masih menggunakan fasilitas ruang belajar SMP Negeri 4 Bekasi.</p>
+                    <p>Tahun pelajaran 1988/1999 lokasi belajar dipindah ke SMAN 1 Bekasi ke Bekasi Timur sebagai sekolah induk dan kegiatan belajar mengajar dilaksanakan siang hari. Status kelas jauh disandang oleh SMAN 4 Bekasi hingga lima angkatan.</p>
+                    <p>Tahun 1991 terjadi pergantian Kepala Sekolah, pada periode ini tepatnya tahun 1992 bangunan SMAN 4 Bekasi mulai berdiri Tahun 1994 SMA Negeri 4 Bekasi yang diresmikan dan diserahterimakan.</p>
+                    `;
+                    break;
+                case 'fasilitas':
+                    content.innerHTML = '<h1>Fasilitas</h1><p>SMA Negeri 4 Kota Bekasi menyediakan berbagai Fasilitas Mulai dari Kamar mandi Siswa pria dan wanita yang terpisah, Parkiran yang cukup, Kolam renang, Air terjun dan masih banyak lagi.</p>';
+                    break;
+                case 'ekstrakulikuler':
+                    content.innerHTML = '<h1>Ekstrakulikuler</h1><p>Berbagai kegiatan ekstrakulikuler tersedia baik wajib maupun tidak. Wajib: <br>Paskibra, Pramuka, Tari, Fosma, Rokris.</p>';
+                    break;
+                case 'jurusan':
+                    content.innerHTML = '<h1>Jurusan</h1><p>SMA Negeri 4 Kota Bekasi menawarkan beberapa jurusan untuk Kurikulum Merdeka ada Soshum, Teknik, Tekbis, Kesehatan, Saintek. Kurikulum 2013 ada Ipa dan Ips</p>';
+                    break;
+                case 'prestasi':
+                    content.innerHTML = '<h1>Prestasi</h1><p>Berbagai prestasi telah diraih oleh siswa dan siswi Mulai dari Akademik dan Non-akademik dari berbagai jangkauan wilayah Nasional, Provinsi, dan kota.</p>';
+                    break;
+                case 'contact':
+                    content.innerHTML = '<h1>Contact Us</h1><p>Phone: (+62) 896-1527-2411<br>Email: sma4bekasi@gmail.com<br>Address: Perumahan Jl. Cemara Permai, Harapan Jaya, Bekasi Utara, 11124.</p>';
+                    break;
+                default:
+                    content.innerHTML = '<h1>SELAMAT DATANG!</h1><p><b>SMA Negeri 4 Kota Bekasi</b> adalah Sekolah Menengah Atas Negeri.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
